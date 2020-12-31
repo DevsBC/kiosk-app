@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kiosk App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/keyboard.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/sweetalert2.css">
+    <link rel='stylesheet' href='css/lato.css' />
+    <link rel='stylesheet' href='css/wickedcss.min.css' />
+
+</head>
+
+<body class='app'>
+
+    <div class="main-content">
+        <div class="contentImage">
+            <img id="shareImage" />
+        </div>
+
+        <button type="button" class="btn-cibeles" style="position: absolute; top: 600px; left: 1340px;" id="submitBtn">Enviar</button>
+
+    </div>
+
+
+    <div id="thisZone">
+        <nav id="otherForm">
+            <div class="mainContainer">
+                <div class="col">
+                    <table class="table" style="text-align: center;">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col" style="font-family: 'Cocogoose';
+                                font-size: 20pt;
+                                background-color: #0079e0;
+                                border-color: transparent;
+                                padding: 0;
+                                border-radius: 10px 10px 0px 0px;">Mis XV</th>
+                            </tr>
+                        </thead>
+                        <tbody style="background: white;
+                        font-size: 15pt;
+                        color: #0079e0;
+                        font-family: 'Cocogoose';">
+                            <tr>
+                                <td id="SetNameXV" style="border-radius: 0px 0px 10px 10px;">Fulana de Tal</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="col">
+                    <table class="table table-bordered" style="text-align: center;
+                    background-color: white;
+                    box-shadow: 0px 0px 13px 4px grey;
+                    overflow-y: visible !important;
+                    ">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Fecha</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div id="dropmonth" class="wrapper-dropdown-5" tabindex="1" style="margin:0px; width: initial; ">
+                                        Mes
+                                        <ul class="dropdown" id="dropMonth">
+                                            <li><a>Enero</a></li>
+                                            <li><a>Febrero</a></li>
+                                            <li><a>Marzo</a></li>
+                                            <li><a>Abril</a></li>
+                                            <li><a>Mayo</a></li>
+                                            <li><a>Junio</a></li>
+                                            <li><a>Julio</a></li>
+                                            <li><a>Agosto</a></li>
+                                            <li><a>Septiembre</a></li>
+                                            <li><a>Octubre</a></li>
+                                            <li><a>Noviembre</a></li>
+                                            <li><a>Diciembre</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div id="dropyear" class="wrapper-dropdown-5" tabindex="1" style="margin:0px; width: initial;">
+                                        Año
+                                        <ul class="dropdown" id="dropYear">
+                                            <li><a>2019</a></li>
+                                            <li><a>2020</a></li>
+                                            <li><a>2021</a></li>
+                                            <li><a>2022</a></li>
+                                            <li><a>2023</a></li>
+                                            <li><a>2024</a></li>
+                                            <li><a>2025</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colspan="2">Invitados</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div id="dd" class="wrapper-dropdown-5" tabindex="1" style="margin: 0px; width: initial;">
+                                        #
+                                        <ul class="dropdown" id="dropGuests">
+                                            <li><a id="firstOp">50-100</a></li>
+                                            <li><a id="secondOp">100-250</a></li>
+                                            <li><a id="thirdOp">250-400</a></li>
+                                            <li><a id="thirdOp">400-600</a></li>
+                                            <li><a id="thirdOp">600-800</a></li>
+                                            <li><a id="thirdOp">800 o mas</a></li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </nav>
+        <div class="page-wrapper chiller-theme toggled " id="containerSidebar">
+            <div>
+                <a id="show-sidebar" class="btn btn-sm btn-dark heartbeat" href="#" style=" display: none;">
+                    <i class="fas fa-bars"> ABRIR</i>
+                </a>
+            </div>
+
+            <nav id="sidebar" class="sidebar-wrapper">
+                <div class="sidebar-content">
+                    <div class="sidebar-brand shake">
+                        <a href="#" id="close-sidebar">CERRAR</a>
+                    </div>
+                    <!-- sidebar-search  -->
+                    <div class="sidebar-menu">
+                        <ul>
+                            <li class="header-menu ">
+
+                                <div class="containerItems rollerRight">
+                                    <div class="d-flex justify-content-center h-100">
+                                        <div class="image_outer_container">
+                                            <div class="green_icon"></div>
+                                            <div class="image_inner_container">
+                                                <img src="img/wall.png" class="options" id="fondos">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="containerItems rollerRight">
+                                    <div class="d-flex justify-content-center h-100">
+                                        <div class="image_outer_container">
+                                            <div class="green_icon"></div>
+                                            <div class="image_inner_container">
+                                                <img src="img/tablet.png" class="options" id="mesas">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="containerItems rollerRight">
+                                    <div class="d-flex justify-content-center h-100">
+                                        <div class="image_outer_container">
+                                            <div class="green_icon"></div>
+                                            <div class="image_inner_container">
+                                                <img src="img/flower.png" class="options" id="flores">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="containerItems rollerRight">
+                                    <div class="d-flex justify-content-center h-100">
+                                        <div class="image_outer_container">
+                                            <div class="green_icon"></div>
+                                            <div class="image_inner_container">
+                                                <img src="img/candy.png" class="options" id="dulces">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="containerItems rollerRight">
+                                    <div class="d-flex justify-content-center h-100">
+                                        <div class="image_outer_container">
+                                            <div class="green_icon"></div>
+                                            <div class="image_inner_container">
+                                                <img src="img/djm.png" class="options" id="dj">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="containerItems rollerRight">
+                                    <div class="d-flex justify-content-center h-100">
+                                        <div class="image_outer_container">
+                                            <div class="green_icon"></div>
+                                            <div class="image_inner_container">
+                                                <img src="img/show.png" class="options" id="show">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="containerItems rollerRight">
+                                    <div class="d-flex justify-content-center h-100">
+                                        <div class="image_outer_container">
+                                            <div class="green_icon"></div>
+                                            <div class="image_inner_container">
+                                                <img src="img/cocktail.png" class="options" id="bebidas">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- sidebar-menu  -->
+                </div>
+                <!-- sidebar-content  -->
+            </nav>
+        </div>
+
+        <section>
+            <div id="content">
+                <div id="dummy_debris" class="debris"> </div>
+                <div id="cuadro2">
+                </div>
+
+                <div id="cuadro1">
+                </div>
+
+            </div>
+            <div>
+        </section>
+        </div>
+
+
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.keyboard.extension-typing.js"></script>
+        <script src="js/jquery-migrate.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.keyboard.js"></script>
+        <script src="js/jquery.mousewheel.js"></script>
+        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="js/sweetalert2.js"></script>
+        <script src="js/formB.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/modernizr.custom.79639.js"></script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/jquery.ui.touch-punch.min.js"></script>
+        <script src="js/html2canvas.min.js"></script>
+</body>
+
+
+<footer>
+</footer>
+
+</html>
